@@ -15,66 +15,77 @@ This README provides an overview of the **Simple Task Management API** built usi
 To set up the project, follow these steps:
 
 1. **Install NestJS CLI**:
-   ```bash
-   npm i -g @nestjs/cli
+```bash
+  npm i -g @nestjs/cli
+```
 
 2. **Create a new NestJS project**:
-  ```bash
+```bash
   nest new task-management
+```
 
 3. **Navigate to the project directory**:
-  ```bash
+```bash
   cd task-management
+```
 
 4. **Install necessary packages (if using UUID for task IDs)**:
-  ```bash
+```bash
   yarn add uuid
+```
 
 5. **Run the application**:
-  ```bash
+```bash
   npm run start:dev
+```
 
 Make necessary requests via API tool like Postman.
 
 ## API Endpoints
 The following endpoints are available in the Task Management API:
-Method	  Endpoint	  Description
-GET	      /tasks	    Retrieve all tasks
-GET	      /tasks/:id	Retrieve a task by ID
-POST	    /tasks	    Create a new task
+```bash
+Method	  Endpoint	        Description
+GET	      /tasks	          Retrieve all tasks
+GET	      /tasks/:id	      Retrieve a task by ID
+POST	    /tasks	          Create a new task
 PATCH	    /tasks/:id/status	Update the status of a task
-DELETE	  /tasks/:id	Delete a task
+DELETE	  /tasks/:id	      Delete a task
+```
 
 ## Commands Used
 The following commands are commonly used in this project:
 1. Generate Service:
-  ```bash
+```bash
   nest g service tasks --no-spec
+```
 
 2. Generate Controller:
-  ```bash
+```bash
   nest g controller tasks --no-spec
+```
 
 3. Generate Module:
-  ```bash
+```bash
   nest g module tasks --no-spec
+```
 
 ## Project Structure
 The project structure is as follows:
-text
-task-management/
-├── src/
-│   ├── app.controller.ts
-│   ├── app.module.ts
-│   ├── app.service.ts
-│   ├── tasks/
-│       ├── tasks.controller.ts
-│       ├── tasks.service.ts
-│       ├── tasks.model.ts
-│       └── tasks.module.ts
-├── main.ts
-├── package.json
-└── README.md
+```bash
+  task-management/
+  ├── src/
+  │   ├── app.controller.ts
+  │   ├── app.module.ts
+  │   ├── app.service.ts
+  │   ├── tasks/
+  │       ├── tasks.controller.ts
+  │       ├── tasks.service.ts
+  │       ├── tasks.model.ts
+  │       └── tasks.module.ts
+  ├── main.ts
+  ├── package.json
+  └── README.md
+```
 
 ## Key Files
 1. app.module.ts: The root module that imports the TasksModule.
